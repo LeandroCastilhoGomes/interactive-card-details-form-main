@@ -1,0 +1,27 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
+    display: flex;
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+}
+
+footer {
+    background-color: black;
+    color: azure;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 24%, 77%); 
+}
