@@ -13,40 +13,41 @@
 <body>
 <main>
   
-    <div id="cardfrente">
-      0000 0000 0000 0000
-      Jane Appleseed
-      00/00
+    <div id="container">
+      <div id="cards">
+        <picture>
+          <source media="(max-width: 650px)" srcset="images/bg-main-mobile.png">
+          <img src="images/bg-main-desktop.png" alt="">
+        </picture>
+        <div id="cardfrente">
+          <img src="images/bg-card-front.png" alt="">
+          <h1>0000 0000 0000 0000</h1>
+          <h2>Jane Appleseed</h2>
+          <h3>00/00</h3>
+        </div>
+        <div id="cardback">
+          <img src="images/bg-card-back.png" alt="">
+          <h3>000</h3>
+        </div>
+      </div>
+      <div id="form">
+        Cardholder Name
+        e.g. Jane Appleseed
+        Card Number
+        e.g. 1234 5678 9123 0000
+        Exp. Date (MM/YY)
+        MM
+        YY
+        CVC
+        e.g. 123
+        Confirm
+      
+        Thank you!
+        We've added your card details
+        Continue
+      </div>
     </div>
-  
-    <div id="cardback">
-      000
-    </div>
-  
-    <div>
-      Cardholder Name
-      e.g. Jane Appleseed
-    </div>
-  
-    <div>
-      Card Number
-      e.g. 1234 5678 9123 0000
-    </div>
-  
-    Exp. Date (MM/YY)
-    MM
-    YY
-  
-    CVC
-    e.g. 123
-  
-    Confirm
-  
-    <!-- Completed state start -->
-  
-    Thank you!
-    We've added your card details
-    Continue
+   
   
 </main>
   <footer>
