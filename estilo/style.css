@@ -3,6 +3,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-size: 18px;
     font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -73,11 +74,13 @@
     }
 }
 
-h1 {
+#numcard {
     position: absolute;
     color: white;
+    font-size: 1.6em;
     top: 130px;
-    left: 50px;
+    left: 45px;
+    letter-spacing: 2.5px;
 }
 
 p {
@@ -88,12 +91,27 @@ p {
     left: 50px;
 }
 
-h3 {
+#card-mes {
     position: absolute;
     color: white;
     top: 196px;
     left: 350px;
 }
+
+span {
+    position: absolute;
+    color: white;
+    top: 195px;
+    left: 375px;
+}
+
+#card-ano {
+    position: absolute;
+    color: white;
+    top: 196px;
+    left: 385px;
+}
+
 
 #form {
     display: flex;
