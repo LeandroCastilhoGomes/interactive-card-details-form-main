@@ -6,6 +6,16 @@
     font-family: 'Space Grotesk', sans-serif;
 }
 
+:root {
+    --cor01: hsl(278, 68%, 11%);
+    --cor02: hsl(279, 6%, 55%);
+    --cor03: hsl(270, 3%, 87%);
+    --cor04: hsl(0, 100%, 66%);
+    /* background-image: linear-gradient */
+    --cor05: hsl(249, 99%, 64%);
+    --cor06: hsl(278, 94%, 30%);
+}
+
 
 #container {
     display: flex;
@@ -94,7 +104,7 @@ span {
     left: 385px;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1150px) {
     #container {
         background-image: url(../images/bg-main-mobile.png);
         position: static;
@@ -156,7 +166,7 @@ span {
     /* justify-content: space-between; */
     /* align-items: center; */
     position: absolute;
-    left: 50%;
+    left: 40%;
     text-transform: uppercase;
     text-align: left;
     top: 25%;
@@ -165,12 +175,12 @@ span {
     /* margin-left: 50vw;*/
 }
 
- @media screen and (max-width: 1300px) {
+ @media screen and (max-width: 1150px) {
     #form {
         /* max-width: 300px; */
         position: absolute;
         left: 0px;
-        top: 20em;
+        top: 18em;
         width: calc(100% - 330px);
         /* text-align: left; */
         /* vertical-align: middle; */
@@ -178,9 +188,27 @@ span {
         /* margin: 0px; */
         /* padding: 0px; */
     }
-    form > div {
-        width: 380px;
+    #nome, #numero {
+        max-width: 300px;
+    }
+    #form > form > div > label {
+        font-size: 0.9em;
+    }
+    #codigo{
+        max-width: 100px;
+    }
+    #data {
+        max-width: 70px;
+    }
+    form {
+        /* display: flex; */
+        /* flex-wrap: wrap; */
+        width: 320px;
         margin: auto;
+    }
+     #conf {
+        max-width: 320px;
+        margin-bottom: 30px;
     }
 }
 
@@ -190,15 +218,14 @@ form {
     justify-content: space-between;
     align-items: flex-end; 
     margin-left: 50%;
-    width: 371px;
-    height: 400px;
+    max-width: 740px;
+    height: 375px;
 }
 
 input {
     border: 1px solid hsl(270, 3%, 87%);
     margin-top: 10px;
-    padding: 0px;
-    width: 100%;
+    font-size:large ;
 }
 
 #nome, #numero {
@@ -227,9 +254,22 @@ input {
 
 #concluido {
     display: none;
+    /* display: block; */
+    text-align: center;
+    width: 400px;
+    padding: 20px;
 }
 
-button {
+#conf {
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    height: 50px;
+    width: 371px;
+}
+
+#cont {
     background-color: hsl(278, 68%, 11%);
     color: white;
     font-size: 18px;
