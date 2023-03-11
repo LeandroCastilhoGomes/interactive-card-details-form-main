@@ -216,6 +216,21 @@ span {
         max-width: 320px;
         margin-bottom: 30px;
     }
+    #concluido {
+        text-align: center;
+        max-width: 310px;
+        padding: 20px;
+        margin-left: 30%;
+    }
+    #concluido > p {
+        font-size: 1em;
+        max-width: 310px;
+        letter-spacing: 0.5px;
+        text-transform: initial;
+    }
+    #cont {
+        max-width: 315px;
+    }
 }
 
 form {
@@ -264,6 +279,22 @@ input {
     text-align: center;
     width: 400px;
     padding: 20px;
+    margin-left: 45%;
+}
+
+#concluido > img {
+    margin: 20px;
+}
+
+#concluido > p {
+    text-align: center;
+    text-transform: initial;
+    letter-spacing: 0.5px;
+    width: 400px;
+    padding-top: 15px;
+    margin-left: 45%;
+    left: 1em;
+    top: 11em;
 }
 
 #conf {
@@ -282,6 +313,7 @@ input {
     border-radius: 5px;
     height: 50px;
     width: 371px;
+    margin-top: 40px;
 }
 
 footer {
