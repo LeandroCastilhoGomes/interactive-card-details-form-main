@@ -247,6 +247,7 @@ input {
     border: 1px solid hsl(270, 3%, 87%);
     margin-top: 10px;
     font-size:large ;
+    cursor: pointer;
 }
 
 #nome, #numero {
@@ -304,6 +305,7 @@ input {
     border-radius: 5px;
     height: 50px;
     width: 371px;
+    cursor: pointer;
 }
 
 #cont {
@@ -314,6 +316,7 @@ input {
     height: 50px;
     width: 371px;
     margin-top: 40px;
+    cursor: pointer;
 }
 
 footer {
