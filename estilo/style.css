@@ -203,7 +203,10 @@ span {
     #codigo{
         max-width: 100px;
     }
-    #data {
+    #mes {
+        max-width: 70px;
+    }
+    #ano {
         max-width: 70px;
     }
     form {
@@ -260,7 +263,14 @@ input {
 
 }
 
-#data {
+#mes {
+    border-radius: 5px;
+    height: 20px;
+    width: 60px;
+    padding: 10px;
+}
+
+#ano {
     border-radius: 5px;
     height: 20px;
     width: 60px;
