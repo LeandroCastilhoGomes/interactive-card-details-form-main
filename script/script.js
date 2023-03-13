@@ -1,62 +1,62 @@
-const form = document.getElementById('form')
+const form = document.getElementById('formu')
 const concluido = getElementById('concluido')
 
-const nomeins = document.getElementById('nome').value(String)
-const numeroins = document.getElementById('numero').value(Number)
-const mesins = document.getElementById('mes').value(Number)
-const anoins = document.getElementById('ano').value(Number)
-const cvcins = document.getElementById('codigo').value(Number)
+const nomeins = document.getElementById('nome')
+const numeroins = document.getElementById('numero')
+const mesins = document.getElementById('mes')
+const anoins = document.getElementById('ano')
+const cvcins = document.getElementById('codigo')
 
-const nomecard = document.getElementById('nome-card').value(String)
-const numcard = document.getElementById('numcard').value(Number)
-const mescard = document.getElementById('card-mes').value(Number)
-const anocard = document.getElementById('card-ano').value(Number)
-const cvccard = document.getElementById('cod-seg').value(Number)
+const cardNome = document.getElementById('nome-card')
+const cardNum = document.getElementById('numcard')
+const cardMes = document.getElementById('card-mes')
+const cardAno = document.getElementById('card-ano')
+const cardCvc = document.getElementById('cod-seg')
 
-const nomeinfo = document.getElementById('nomeinfo').value(String)
-const numinfo = document.getElementById('numinfo').value(Number)
-const datainfo = document.getElementById('datainfo').value(Number)
-const cvcinfo = document.getElementById('cvcinfo').value(Number)
+const nomeinfo = document.getElementById('nomeinfo')
+const numinfo = document.getElementById('numinfo')
+const datainfo = document.getElementById('datainfo')
+const cvcinfo = document.getElementById('cvcinfo')
 
-const onNameChange = (event) => {
-    const name = event.target.value;
-    nomecard.textContent = name.length ? name : 'Jane Appleseed';
-  };
+const onNomeChange = (event) => {
+    const nome = event.target.value
+    cardNome.textContent = nome.length ? nome : 'Jane Appleseed'
+  }
   
-  const onNumberChange = (event) => {
-    const number = event.target.value;
-    numcard.textContent = number.length ? number : '0000 0000 0000 0000';
-  };
+  const onNumChange = (event) => {
+    const number = event.target.value
+    cardNum.textContent = number.length ? number : '0000 0000 0000 0000'
+  }
   
-  const onMonthChange = (event) => {
+  const onMesChange = (event) => {
     if (event.target.value.length > 2) {
-      event.target.value = event.target.value.slice(0, 2);
+      event.target.value = event.target.value.slice(0, 2)
     }
-    const month = event.target.value;
-    mescard.textContent = month.length ? month : '00';
-  };
+    const month = event.target.value
+    cardMes.textContent = month.length ? month : '00'
+  }
   
-  const onYearChange = (event) => {
+  const onAnoChange = (event) => {
     if (event.target.value.length > 2) {
-      event.target.value = event.target.value.slice(0, 2);
+      event.target.value = event.target.value.slice(0, 2)
     }
     const year = event.target.value;
-    anocard.textContent = year.length ? year : '00';
-  };
+    cardAno.textContent = year.length ? year : '00'
+  }
   
-  const onCVCChange = (event) => {
+  const onCvcChange = (event) => {
     if (event.target.value.length > 2) {
-      event.target.value = event.target.value.slice(0, 3);
+      event.target.value = event.target.value.slice(0, 3)
     }
-    const cvc = event.target.value;
-    cvccard.textContent = cvc.length ? cvc : '000';
-  };
+    const cvc = event.target.value
+    cardCvc.textContent = cvc.length ? cvc : '000'
+  }
   
-  nomeins.addEventListener('input', onNameChange);
-  numeroins.addEventListener('input', onNumberChange);
-  mesins.addEventListener('input', onMonthChange);
-  anoins.addEventListener('input', onYearChange);
-  cvcins.addEventListener('input', onCVCChange);
+  nomeins.addEventListener('input', onNomeChange)
+  numeroins.addEventListener('input', onNumChange)
+  mesins.addEventListener('input', onMesChange)
+  anoins.addEventListener('input', onAnoChange)
+  cvcins.addEventListener('input', onCvcChange)
   
   // Mask
   const maskCardNumber = (event) => {
@@ -64,109 +64,109 @@ const onNameChange = (event) => {
     if (event.keyCode != 46 && event.keyCode != 8) {
       const i = numeroins.value.length;
       if (i === 4 || i === 9 || i === 14) {
-        numeroins.value += ' ';
+        numeroins.value += ' '
       }
     }
-  };
+  }
   
-  document.addEventListener('keydown', maskCardNumber);
+  document.addEventListener('keydown', maskCardNumber)
   
   // Validation
   const genericValidation = (name, value, condition, input, info) => {
     if (condition) {
-      input.style.borderColor = 'hsl(0, 100%, 66%)';
-      info.textContent = 'Invalid ' + name;
+      input.style.borderColor = 'hsl(0, 100%, 66%)'
+      info.textContent = 'Invalid ' + name
   
       if (!value.length) {
-        info.textContent = "Can't be blank";
+        info.textContent = "Can't be blank"
       }
     } else {
-      input.style.borderColor = 'hsl(270, 3%, 87%)';
-      info.textContent = '';
+      input.style.borderColor = 'hsl(270, 3%, 87%)'
+      info.textContent = ''
     }
-  };
+  }
   
   const nameValidate = (event) => {
-    const name = 'name';
+    const name = 'nome';
     const value = event.target.value;
-    const condition = value.length < 4 || !value.includes(' ');
+    const condition = value.length < 4 || !value.includes(' ')
   
-    genericValidation(name, value, condition, nomeins, nomeinfo);
-  };
+    genericValidation(name, value, condition, nomeins, nomeinfo)
+  }
   
-  const numberValidate = (event) => {
-    const name = 'card number';
+  const numeroValidate = (event) => {
+    const name = 'numero'
     const value = event.target.value;
-    const condition = value.length !== 19 || !/^[0-9\s]*$/.test(value);
+    const condition = value.length !== 19 || !/^[0-9\s]*$/.test(value)
   
     genericValidation(name, value, condition, numeroins, numinfo);
-  };
+  }
   
-  const monthValidate = (event) => {
-    const name = 'month';
+  const mesValidate = (event) => {
+    const name = 'mes'
     const value = event.target.value;
-    const condition = value < 1 || value > 12;
+    const condition = value < 1 || value > 12
   
-    genericValidation(name, value, condition, mesins, datainfo);
-  };
+    genericValidation(name, value, condition, mesins, datainfo)
+  }
   
-  const yearValidate = (event) => {
-    const name = 'year';
+  const anoValidate = (event) => {
+    const name = 'ano'
     const value = event.target.value;
-    const condition = value < 23 || value > 30;
+    const condition = value < 23 || value > 30
   
-    genericValidation(name, value, condition, anoins, datainfo);
-  };
+    genericValidation(name, value, condition, anoins, datainfo)
+  }
   
-  const CVCValidate = (event) => {
-    const name = 'CVC';
-    const value = event.target.value;
-    const condition = value.length !== 3;
+  const cvcValidate = (event) => {
+    const name = 'cvc'
+    const value = event.target.value
+    const condition = value.length !== 3
   
-    genericValidation(name, value, condition, cvcins, cvcinfo);
-  };
+    genericValidation(name, value, condition, cvcins, cvcinfo)
+  }
   
-  nomeins.addEventListener('blur', nomeValidate);
-  numeroins.addEventListener('blur', numeroValidate);
-  mesins.addEventListener('blur', mesValidate);
-  anoins.addEventListener('blur', anoValidate);
-  cvcins.addEventListener('blur', cvcValidate);
+  nomeins.addEventListener('blur', nameValidate)
+  numeroins.addEventListener('blur', numeroValidate)
+  mesins.addEventListener('blur', mesValidate)
+  anoins.addEventListener('blur', anoValidate)
+  cvcins.addEventListener('blur', cvcValidate)
   
   // Submit
   const onSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault()
   
-    let formIsValid = true;
+    let formIsValid = true
   
-    const name = nameInput.value.trim();
+    const name = nomeins.value.trim()
     if (name.length < 4 || !name.includes(' ')) {
-      formIsValid = false;
+      formIsValid = false
     }
   
     const number = numeroins.value.trim();
     if (number.length !== 19 || !/^[0-9\s]*$/.test(number)) {
-      formIsValid = false;
+      formIsValid = false
     }
   
-    const month = +mesins.value.trim();
+    const month = +mesins.value.trim()
     if (month < 1 || month > 12) {
       formIsValid = false;
     }
   
-    const year = +anoins.value.trim();
+    const year = +anoins.value.trim()
     if (year < 23 || year > 30) {
-      formIsValid = false;
+      formIsValid = false
     }
   
     const cvc = cvcins.value.trim();
     if (+cvc < 1 || +cvc > 999 || cvc.length !== 3) {
-      formIsValid = false;
+      formIsValid = false
     }
   
     if (formIsValid) {
-      form.style.display = 'none';
-      successScreen.style.display = 'block';
+      form.style.display = 'none'
+      concluido.style.display = 'block'
     }
-  };
+  }
   
-  form.addEventListener('submit', onSubmit);
+  form.addEventListener('submit', onSubmit)
