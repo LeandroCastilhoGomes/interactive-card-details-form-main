@@ -26,7 +26,13 @@ function nomecard() {
 
 }
 
+function num() {
+  const numeroins = document.getElementById('numero')
+  const cardNome = document.getElementById('numcard')
+  const num = String(numeroins.value)
+  document.getElementById('numcard').innerText = num
 
+}
 // const onNomeChange = (event) => {
 //     const nome = event.target.value
 //     cardNome.textContent = nome.length ? nome : 'Jane Appleseed'
