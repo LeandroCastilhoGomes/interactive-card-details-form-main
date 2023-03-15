@@ -22,15 +22,39 @@ function nomecard() {
   const nomeins = document.getElementById('nome')
   const cardNome = document.getElementById('nome-card')
   const nome = String(nomeins.value)
-  document.getElementById('nome-card').innerText = nome
+  cardNome.innerText = nome
 
 }
 
 function num() {
   const numeroins = document.getElementById('numero')
-  const cardNome = document.getElementById('numcard')
+  const cardNum = document.getElementById('numcard')
   const num = String(numeroins.value)
-  document.getElementById('numcard').innerText = num
+  cardNum.innerText = num
+
+}
+
+function mes() {
+  const mesins = document.getElementById('mes')
+  const cardMes = document.getElementById('card-mes')
+  const mes = Number(mesins.value)
+  cardMes.innerText = mes
+
+}
+
+function ano() {
+  const anoins = document.getElementById('ano')
+  const cardAno = document.getElementById('card-ano')
+  const ano = Number(anoins.value)
+  cardAno.innerText = ano
+
+}
+
+function cvc() {
+  const cvcins = document.getElementById('codigo')
+  const cardCvc = document.getElementById('cod-seg')
+  const cvc = Number(cvcins.value)
+  cardCvc.innerText = cvc
 
 }
 // const onNomeChange = (event) => {

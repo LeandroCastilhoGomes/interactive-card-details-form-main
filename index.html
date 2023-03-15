@@ -57,7 +57,7 @@
             id="mes" 
             min="1"
             max="12"
-            placeholder="MM"></input>
+            placeholder="MM" oninput="mes()"></input>
 
             <input 
             type="number" 
@@ -65,7 +65,7 @@
             id="ano" 
             min="23"
             max="30"
-            placeholder="YY"></input>
+            placeholder="YY" oninput="ano()"></input>
             <span id="datainfo"></span>
           </div>
 
@@ -76,7 +76,7 @@
             name="codigo" 
             id="codigo"
             maxlength="2" min="0" max="999" 
-            placeholder="e.g. 123"/>
+            placeholder="e.g. 123" oninput="cvc()"/>
             <span id="cvcinfo"></span>
           </div>
 
