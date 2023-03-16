@@ -46,7 +46,7 @@ function ano() {
   const anoins = document.getElementById('ano')
   const cardAno = document.getElementById('card-ano')
   const ano = Number(anoins.value)
-  cardAno.innerText = ano
+  document.getElementById(datainfo).innerText = ano
 
 }
 
