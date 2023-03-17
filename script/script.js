@@ -97,18 +97,18 @@ function cvc() {
 //   anoins.addEventListener('input', onAnoChange)
 //   cvcins.addEventListener('input', onCvcChange)
   
-  // Mask
-  // const maskCardNumber = (event) => {
-  //   // Key pressed is not backspace or delete
-  //   if (event.keyCode != 46 && event.keyCode != 8) {
-  //     const i = numeroins.value.length;
-  //     if (i === 4 || i === 9 || i === 14) {
-  //       numeroins.value += ' '
-  //     }
-  //   }
-  // }
+  Mask
+  const maskCardNumber = (event) => {
+    // Key pressed is not backspace or delete
+    if (event.keyCode != 46 && event.keyCode != 8) {
+      const i = numeroins.value.length;
+      if (i === 4 || i === 9 || i === 14) {
+        numeroins.value += ' '
+      }
+    }
+  }
   
-  // document.addEventListener('keydown', maskCardNumber)
+  document.addEventListener('keydown', maskCardNumber)
   
   // // Validation
   // const genericValidation = (name, value, condition, input, info) => {
