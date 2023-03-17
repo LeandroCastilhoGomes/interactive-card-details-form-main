@@ -171,41 +171,41 @@ function cvc() {
   // anoins.addEventListener('blur', anoValidate)
   // cvcins.addEventListener('blur', cvcValidate)
   
-  // // Submit
-  // const onSubmit = (event) => {
-  //   event.preventDefault()
+  // Submit
+  const onSubmit = (event) => {
+    event.preventDefault()
   
-  //   let formIsValid = true
+    let formIsValid = true
   
-  //   const name = nomeins.value.trim()
-  //   if (name.length < 4 || !name.includes(' ')) {
-  //     formIsValid = false
-  //   }
+    const name = nomeins.value.trim()
+    if (name.length < 4 || !name.includes(' ')) {
+      formIsValid = false
+    }
   
-  //   const number = numeroins.value.trim();
-  //   if (number.length !== 19 || !/^[0-9\s]*$/.test(number)) {
-  //     formIsValid = false
-  //   }
+    const number = numeroins.value.trim();
+    if (number.length !== 19 || !/^[0-9\s]*$/.test(number)) {
+      formIsValid = false
+    }
   
-  //   const month = +mesins.value.trim()
-  //   if (month < 1 || month > 12) {
-  //     formIsValid = false;
-  //   }
+    const month = +mesins.value.trim()
+    if (month < 1 || month > 12) {
+      formIsValid = false;
+    }
   
-  //   const year = +anoins.value.trim()
-  //   if (year < 23 || year > 30) {
-  //     formIsValid = false
-  //   }
+    const year = +anoins.value.trim()
+    if (year < 23 || year > 30) {
+      formIsValid = false
+    }
   
-  //   const cvc = cvcins.value.trim();
-  //   if (+cvc < 1 || +cvc > 999 || cvc.length !== 3) {
-  //     formIsValid = false
-  //   }
+    const cvc = cvcins.value.trim();
+    if (+cvc < 1 || +cvc > 999 || cvc.length !== 3) {
+      formIsValid = false
+    }
   
-  //   if (formIsValid) {
-  //     form.style.display = 'none'
-  //     concluido.style.display = 'block'
-  //   }
-  // }
+    if (formIsValid) {
+      form.style.display = 'none'
+      concluido.style.display = 'block'
+    }
+  }
   
-  // form.addEventListener('submit', onSubmit)
+  form.addEventListener('submit', onSubmit)
