@@ -111,65 +111,65 @@ function cvc() {
   document.addEventListener('keydown', maskCardNumber)
   
   // // Validation
-  // const genericValidation = (name, value, condition, input, info) => {
-  //   if (condition) {
-  //     input.style.borderColor = 'hsl(0, 100%, 66%)'
-  //     info.textContent = 'Invalid ' + name
+  const genericValidation = (name, value, condition, input, info) => {
+    if (condition) {
+      input.style.borderColor = 'hsl(0, 100%, 66%)'
+      info.textContent = 'Invalid ' + name
   
-  //     if (!value.length) {
-  //       info.textContent = "Can't be blank"
-  //     }
-  //   } else {
-  //     input.style.borderColor = 'hsl(270, 3%, 87%)'
-  //     info.textContent = ''
-  //   }
-  // }
+      if (!value.length) {
+        info.textContent = "Can't be blank"
+      }
+    } else {
+      input.style.borderColor = 'hsl(270, 3%, 87%)'
+      info.textContent = ''
+    }
+  }
   
-  // const nameValidate = (event) => {
-  //   const name = 'nome';
-  //   const value = event.target.value;
-  //   const condition = value.length < 4 || !value.includes(' ')
+  const nameValidate = (event) => {
+    const name = 'nome';
+    const value = event.target.value;
+    const condition = value.length < 4 || !value.includes(' ')
   
-  //   genericValidation(name, value, condition, nomeins, nomeinfo)
-  // }
+    genericValidation(name, value, condition, nomeins, nomeinfo)
+  }
   
-  // const numeroValidate = (event) => {
-  //   const name = 'numero'
-  //   const value = event.target.value;
-  //   const condition = value.length !== 19 || !/^[0-9\s]*$/.test(value)
+  const numeroValidate = (event) => {
+    const name = 'numero'
+    const value = event.target.value;
+    const condition = value.length !== 19 || !/^[0-9\s]*$/.test(value)
   
-  //   genericValidation(name, value, condition, numeroins, numinfo);
-  // }
+    genericValidation(name, value, condition, numeroins, numinfo);
+  }
   
-  // const mesValidate = (event) => {
-  //   const name = 'mes'
-  //   const value = event.target.value;
-  //   const condition = value < 1 || value > 12
+  const mesValidate = (event) => {
+    const name = 'mes'
+    const value = event.target.value;
+    const condition = value < 1 || value > 12
   
-  //   genericValidation(name, value, condition, mesins, datainfo)
-  // }
+    genericValidation(name, value, condition, mesins, datainfo)
+  }
   
-  // const anoValidate = (event) => {
-  //   const name = 'ano'
-  //   const value = event.target.value;
-  //   const condition = value < 23 || value > 30
+  const anoValidate = (event) => {
+    const name = 'ano'
+    const value = event.target.value;
+    const condition = value < 23 || value > 30
   
-  //   genericValidation(name, value, condition, anoins, datainfo)
-  // }
+    genericValidation(name, value, condition, anoins, datainfo)
+  }
   
-  // const cvcValidate = (event) => {
-  //   const name = 'cvc'
-  //   const value = event.target.value
-  //   const condition = value.length !== 3
+  const cvcValidate = (event) => {
+    const name = 'cvc'
+    const value = event.target.value
+    const condition = value.length !== 3
   
-  //   genericValidation(name, value, condition, cvcins, cvcinfo)
-  // }
+    genericValidation(name, value, condition, cvcins, cvcinfo)
+  }
   
-  // nomeins.addEventListener('blur', nameValidate)
-  // numeroins.addEventListener('blur', numeroValidate)
-  // mesins.addEventListener('blur', mesValidate)
-  // anoins.addEventListener('blur', anoValidate)
-  // cvcins.addEventListener('blur', cvcValidate)
+  nomeins.addEventListener('blur', nameValidate)
+  numeroins.addEventListener('blur', numeroValidate)
+  mesins.addEventListener('blur', mesValidate)
+  anoins.addEventListener('blur', anoValidate)
+  cvcins.addEventListener('blur', cvcValidate)
   
   // Submit
   const onSubmit = (event) => {
